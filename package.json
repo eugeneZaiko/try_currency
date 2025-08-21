@@ -1,0 +1,30 @@
+{
+  "name": "decard-integration",
+  "version": "1.0.0",
+  "description": "Integration with DeCard API for payments and payouts",
+  "main": "dist/webhookServer.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/webhookServer.js",
+    "start:webhook": "ts-node src/webhookServer.ts",
+    "example:1-payin": "ts-node src/examples/1_createPayin.ts",
+    "example:2-payout-init": "ts-node src/examples/2_createPayout.ts",
+    "example:3-check-status": "ts-node src/examples/3_checkStatus.ts",
+    "example:4-payout-confirm": "ts-node src/examples/4_confirmPayout.ts",
+    "example:5-mismatch-agree": "ts-node src/examples/5_handleMismatch.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
